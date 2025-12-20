@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("illusory game")
+define config.name = _("Creepy Chats")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "illusorygame"
+define build.name = "creepychats"
 
 
 ## Sounds and music ############################################################
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "illusorygame-1765827253"
+define config.save_directory = "creepychats-1765827253"
 
 
 ## Icon ########################################################################

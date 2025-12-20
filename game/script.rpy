@@ -1,9 +1,7 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
+﻿
+define p = Character(_("You"), color="#FFFFFF")
+define c = Character(_("Chatbot"), color="FF1111")
+define s = Character(_("Sara"), color="fc03d3")
 
 
 # The game starts here.
@@ -15,19 +13,41 @@ label start:
     # images directory to show it.
 
     scene bg room
+    show bg room:
+        xzoom 0.4 yzoom 0.4
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    p "Hey Sara!"
+    s "Hey! Are you done with the essay for English yet?"
+    p "What essay?!?"
+    s "Uhm, the essay that we had a month to work on?"
+    p "Wait, what?!?"
+    p "Oh crap, I got to get started on it, then!"
+    p "Bye!"
+    s "Wait-"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    "I ended the call."
+    "When was there ever an essay for English class?"
+    "I then remembered that I've used my English period as more of a time to nap than a time to write."
+    "I guess I better start working on it."
 
-    # This ends the game.
+    "{i}4 hours later...{/i}"
+
+    show you normal:
+        xalign 0.99 yalign 0.35
+    p "Ugh, I still don't have any ideas for the assignment!"
+
+    p "Oh wait..."
+    p "My school just got a c"
+
+    c "hey"
+
+    "{b}Ending Ending{/b}" # Makes things bold
 
     return
