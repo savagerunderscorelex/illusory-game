@@ -39,15 +39,20 @@ label start:
 
     "{i}4 hours later...{/i}"
 
-    show you normal:
+    show you angry:
         xalign 0.99 yalign 0.35
     p "Ugh, I still don't have any ideas for the assignment!"
 
+    show you normal
     p "Oh wait..."
-    p "My school just got a c"
 
-    c "hey"
+    p "My school just bought a schoolwide subscription to an A.I. assistant. I think it's called SupernaturalSchool A.I."
+    p "I guess I'll use that to help with my assignment."
 
+    "I then went on my laptop to speak with the chatbot."
+
+    c "Hello! My name is Ms. Super and I'm here to help you with any school assignments or any questions you have regarding school. How may I help you?"
+    p "I need help with an English assignment. I don't know where to start with my assignment!"
     "{b}Ending Ending{/b}" # Makes things bold
 
     return
