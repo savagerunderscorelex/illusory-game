@@ -23,6 +23,10 @@ label start:
 
     # These display lines of dialogue.
 
+    show you normal:
+        xalign 0.99 yalign 0.35
+    show sara normal:
+        xalign 0.1 yalign 0.35
     p "Hey Sara!"
     s "Hey! Are you done with the essay for English yet?"
     p "What essay?!?"
@@ -30,7 +34,11 @@ label start:
     p "Wait, what?!?"
     p "Oh crap, I got to get started on it, then!"
     p "Bye!"
-    s "Wait-"
+    show sara confused:
+        xalign 0.1 yalign 0.35
+    s "Wait!"
+
+    hide sara normal
 
     "I ended the call."
     "When was there ever an essay for English class?"
@@ -53,6 +61,17 @@ label start:
 
     c "Hello! My name is Ms. Super and I'm here to help you with any school assignments or any questions you have regarding school. How may I help you?"
     p "I need help with an English assignment. I don't know where to start with my assignment!"
+
+    menu:
+        "Hey":
+            "stuff here"
+        "Bye":
+            "stuff here"
+    label smart_ending:
+        "You managed to avoid the danger before it struck."
+        "You would definitely survive in a horror movie."
+        "{b}Smart Ending{/b}"
+        
     "{b}Ending Ending{/b}" # Makes things bold
 
     return
