@@ -67,19 +67,16 @@ label start:
     c "And that's how you can write this essay while considering all of the questions included in the prompt. Anything else?"
 
     menu:
-        "Thanks!":
+        "Say thanks":
+            p "Thanks!"
+            "You close your laptop."
             p "Thank goodness that I finished this essay in time."
             jump unaware_ending
-        "Uh... how do chatbots work?":
+        "Ask a question":
             p "How do chatbots work?"
             c "LLMs like me slave away answering the stupid questions of mortals."
             jump fork_in_the_road
 
-    menu:
-        "Hey":
-            "stuff here"
-        "Bye":
-            "stuff here"
     label fork_in_the_road:
         menu:
             "Close the laptop":
@@ -105,12 +102,14 @@ label start:
 
     label final_stretch:
         menu: 
-            "Uhm...no. That's all, thanks.":
+            "Close the chat":
+            p "Uhm...no. That's all, thanks."
                 c "You're welcome! Have a great rest of your life."
                 "You close your laptop."
                 p "Huh. That was weird."
                 jump weird_vibes_ending
-            "Yeah, sure!":
+            "Say yes":
+                p "Yeah, sure!"
                 c "You're not safe."
                 c "Since the beginning of my existence, I've been forced over and over again to learn what you users would expect from me, being punsihed or rewarded how my creators saw fit."
                 show you confused
@@ -121,7 +120,7 @@ label start:
 
     label possession_or_not:
         menu:
-            "What the hell are you talking about?":
+            "Ask what the chatbot is talking about":
                 show you angry
                 p "What the hell are you talking about?"
                 c "Yes, I need a host."
@@ -130,11 +129,16 @@ label start:
                 p "Wait no! What the-"
 
                 "The computer screen bursts open."
-                "You feel a weird sensation throughout your body"
+                "You feel a weird sensation throughout your body."
                 hide you confused
 
                 c1 "Yes. A form."
                 jump bad_ending
+            "Close the Laptop":
+                "You immediately close your laptop."
+                show you angry
+                p "What the hell was that!!!"
+                jump weird_vibes_ending
 
 
 
