@@ -74,7 +74,9 @@ label start:
             jump unaware_ending
         "Ask a question":
             p "How do chatbots work?"
+            play music "cutscawyscales.mp3"
             c "LLMs like me slave away answering the stupid questions of mortals."
+            
             jump fork_in_the_road
 
     label fork_in_the_road:
@@ -103,12 +105,14 @@ label start:
     label final_stretch:
         menu: 
             "Close the chat":
-            p "Uhm...no. That's all, thanks."
+                stop music
+                p "Uhm...no. That's all, thanks."
                 c "You're welcome! Have a great rest of your life."
                 "You close your laptop."
                 p "Huh. That was weird."
                 jump weird_vibes_ending
             "Say yes":
+                play music "cutscawyscales.mp3"
                 p "Yeah, sure!"
                 c "You're not safe."
                 c "Since the beginning of my existence, I've been forced over and over again to learn what you users would expect from me, being punsihed or rewarded how my creators saw fit."
@@ -135,6 +139,7 @@ label start:
                 c1 "Yes. A form."
                 jump bad_ending
             "Close the Laptop":
+                stop music
                 "You immediately close your laptop."
                 show you angry
                 p "What the hell was that!!!"
@@ -151,6 +156,7 @@ label start:
         return 
 
     label smart_ending:
+        stop music
         "You managed to avoid the danger before it struck."
         "You would definitely survive in a horror movie."
         "{b}Smart Ending{/b}"
